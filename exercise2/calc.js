@@ -1,64 +1,24 @@
+//TODO: 1] Create an calculator function that computes the math equation. -->
 var calculator = {
-	history: [],
-
 	/*
 	* Algorithm:
-	* if the key is a number concatenate the string value to itself
+	* Check if the key is a number and treat the input as a string. Concatenate the values to themselves as a string.
 	*
-	* if it is an operation, 
-	* then turn the previous value into a number and add it to the history 
-	* and call that corresponding function method, keep track of the number of presses 
-	* of an operation, if it is pressed more than once, treat it as an equal sign
+	*
+	* If the key isn't equals, concatenate the display value to itself with the key passed in.
+	*
+	*
+	* If the key is equal, evaluate the string and save the result to the display 
 	*/
-	calc: function(key){
-		//debugger;
+	calc: function(key = 0){
+		debugger;
 		if(key in ["0","1","2","3","4","5","6","7","8","9"]){
 			document.getElementById("display").value+=key;	
-		}else if(key == "+"){
-			calculator.history.push(document.getElementById("display").value);
-			//TODO: '+' call the plus function
-
-		}else if(key == "-"){
-			calculator.history.push(document.getElementById("display").value);
-			//TODO: '-' call the plus function
-
-		}else if(key == "*"){
-			calculator.history.push(document.getElementById("display").value);
-			//TODO: '*' call the plus function
-
-		}else if(key == "/"){
-			calculator.history.push(document.getElementById("display").value);
-			//TODO: '/' call the plus function
-
+		}else if(key != "="){
+			document.getElementById("display").value+=key;
+		}else{
+			document.getElementById("display").value = eval(document.getElementById("display").value);
 		}
 	},
 
-	/**
-	* Algorithm: Get the value of display and perform an add operation on the key passed
-	*/
-	add: function(key){
-
-	},
-
-	/**
-	* Algorithm: Get the value of display and perform subtraction operation on the key passed
-	*/
-	subtraction: function(key){
-
-	},
-
-	/**
-	* Algorithm: Get the value of display and perform a multiplication operation on the key passed
-	*/
-	multiply: function(key){
-
-	},
-
-	/**
-	* Algorithm: Get the value of display and perform a division operation on the key passed
-	* Handle the divide by zero case
-	*/
-	division: function(key){
-
-	}
 };
