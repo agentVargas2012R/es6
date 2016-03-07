@@ -1,15 +1,12 @@
-//TODO: 1] Refactor this into a calculator class 
-var calculator = {	
-	calc: function(key = 0){
-		debugger;
-		if(key in ["0","1","2","3","4","5","6","7","8","9"]){
-			document.getElementById("display").value+=key;	
-		}else if(key != "="){
-			document.getElementById("display").value+=key;
-		}else{
-			document.getElementById("display").value = eval(document.getElementById("display").value);
-		}
-	},
-	//TODO: 2] Create a clear function which removes all entries from history and resets the value to zero.
-
+//TODO: 1] Export and Refactor this into a calculator class 
+export class Calculator {
+	//TODO: 2] Create a constructor with a variable called recorder. This will record when a calculation is performed.
+	//TODO: 3] Refactor the calc function to be named compute. Keep an eye out for the syntax differences between traditional 
+	//functions and class definitions. 
+	compute(key = 0){
+		//debugger;
+	}
+	
+	//TODO: 4] Create a history function which appends your calculations to the history window.
+	//TODO: 5] Create a clear function which removes all entries from history and resets the value to zero.
 };

@@ -5,10 +5,12 @@
 		 <link rel="stylesheet" type="text/css" href="calc.css">
 		 <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
     	 <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
-    	 <script src="calc.js"></script>
+    	  <script type="module">
+			 import {Calculator} from './calc.js';
+			 window.calculator = new Calculator();
+		 </script>	
 	</head>
 	<body>
-	  <!-- TODO: 1] CRreate a history function and append the calculations to the list ul html. -->
 	  <header>
 	  	<h1 class="heading">EE81 Calculator</h1>
 	  </header>
